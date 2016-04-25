@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Explicit
     private MyManage myManage;
+    private EditText userEditText, passwordEditText;
+    private String userString, passwordString;
 
 
     @Override
