@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Bind Widget
+        userEditText = (EditText) findViewById(R.id.editText3);
+        passwordEditText = (EditText) findViewById(R.id.editText4);
+
         //Request SQLite
         myManage = new MyManage(this);
 
@@ -110,6 +114,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickSignInMain(View view) {
 
+        userString = userEditText.getText().toString().trim();
+        passwordString = passwordEditText.getText().toString().trim();
+
+        if (userString.equals("") || passwordString.equals("")) {
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, "Have Space", "Please Fill All Every Blank");
+        } else {
+            checkUser();
+        }
+
     }   // clickSignIn
+
+    private void checkUser() {
+
+
+
+    }   // checkUser
 
 }   // Main Class
